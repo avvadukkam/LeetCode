@@ -3,5 +3,5 @@ class Solution:
         min_side = []
         for sides in rectangles:
             min_side.append(min(sides))
-        res = max(set(min_side), key = min_side.count)
+        res = max(min_side)
         return min_side.count(res)

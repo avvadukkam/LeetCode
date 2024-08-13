@@ -1,4 +1,4 @@
-# O(n2)
+# Time Complexity = O(n2)
 class Solution:
     def countKDifference(self, nums: List[int], k: int) -> int:
         count = 0
@@ -9,7 +9,7 @@ class Solution:
         return count
     
 
-# O(n)
+# Time Complexity = O(n)
 
 class Solution:
     def countKDifference(self, nums: List[int], k: int) -> int:

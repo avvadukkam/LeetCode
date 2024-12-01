@@ -12,7 +12,7 @@ class Solution:
             k -= 1
         return int(tranS)
     
-# Optimized
+# Optimized version
 class Solution:
     def getLucky(self, s: str, k: int) -> int:
         intS = ''.join(str(ord(c) - 96) for c in s)

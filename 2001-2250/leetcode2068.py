@@ -12,3 +12,16 @@ class Solution:
                 return False
         return True
     
+# Optimized Version
+class Solution:
+    def checkAlmostEquivalent(self, word1: str, word2: str) -> bool:
+        count1 = Counter(word1)
+        count2 = Counter(word2)
+        
+        all_chars = set(count1.keys()).union(count2.keys())
+        
+        for char in all_chars:
+            if abs(count1[char] - count2[char]) >3:
+                return False
+        
+        return True

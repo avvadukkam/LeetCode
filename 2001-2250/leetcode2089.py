@@ -7,3 +7,18 @@ class Solution:
                 res.append(i)
 
         return res
+
+
+
+# OR
+class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+       
+        left = bisect_left(nums, target)  
+        right = bisect_right(nums, target) 
+        
+        if left == right:
+            return []
+        
+        return list(range(left, right))

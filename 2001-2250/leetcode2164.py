@@ -16,3 +16,17 @@ class Solution:
                 res.append(odd.pop())
 
         return res
+    
+
+# Optimized
+class Solution:
+    def sortEvenOdd(self, nums: List[int]) -> List[int]:
+        odd, even = nums[1::2], nums[::2]
+        
+        odd.sort(reverse=True)
+        even.sort()
+        
+        nums[::2] = even
+        nums[1::2] = odd
+        
+        return nums
